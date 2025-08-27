@@ -1,0 +1,29 @@
+.projects-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.left-section {
+  position: relative;
+}
+
+.sticky-content {
+  position: sticky;
+  top: 20px;
+}
+
+.right-section {
+  flex-grow: 1;
+  position: relative;
+}
+
+/* Ensure content doesn't overflow and maintain spacing */
+.project-card {
+  margin-bottom: 16px;
+}
+
+/* Ensure smooth scrolling and no extra space at the bottom */
+.projects-container {
+  overflow: hidden;
+  padding-bottom: 0; /* Ensure no extra space at the bottom */
+}

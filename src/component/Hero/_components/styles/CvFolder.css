@@ -1,0 +1,165 @@
+/* CvFolder.css */
+.showcase-container {
+  position: relative;
+  width: 100%;
+  min-height: 300vh; /* Enough space for the animation */
+  background-color: #111;
+  overflow: hidden;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.showcase-paragraph {
+  width: 90%;
+  max-width: 800px;
+  color: white;
+  font-size: clamp(16px, 2.5vw, 22px);
+  padding: 10vh 0 5vh;
+  line-height: 1.6;
+  text-align: center;
+  z-index: 2;
+}
+
+.showcase-stack {
+  width: 90%;
+  max-width: 800px;
+  perspective: 1000px;
+  z-index: 3;
+  margin: 5vh 0 40vh; /* Added bottom margin to create space for animation */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mockup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px 20px;
+  color: #111;
+  font-family: sans-serif;
+  width: 100%;
+  min-height: 200px;
+  background: #fff;
+  transform-origin: top;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Initial folded state */
+#mockupTwo {
+  transform: rotateX(-90deg);
+}
+
+#mockupThree {
+  transform: rotateX(-90deg);
+}
+
+.mockup h2 {
+  font-size: clamp(20px, 4vw, 32px);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.mockup p {
+  font-size: clamp(14px, 2vw, 18px);
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+.showcase-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 800px;
+  opacity: 0;
+  z-index: 10;
+  text-align: center;
+}
+
+.showcase-text h1 {
+  color: #fff;
+  font-size: clamp(32px, 8vw, 72px);
+  font-weight: 800;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.showcase-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.showcase-button {
+  padding: 16px 32px;
+  border-radius: 12px;
+  border: none;
+  background-color: #fff;
+  color: #111;
+  cursor: pointer;
+  font-size: clamp(16px, 2vw, 18px);
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.showcase-button:hover {
+  background-color: #444;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .showcase-container {
+    min-height: 250vh;
+  }
+  
+  .showcase-paragraph {
+    padding: 8vh 0 4vh;
+  }
+  
+  .mockup {
+    min-height: 180px;
+    padding: 25px 15px;
+  }
+  
+  .showcase-text h1 {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .showcase-container {
+    min-height: 200vh;
+  }
+  
+  .mockup {
+    min-height: 160px;
+    padding: 20px 12px;
+  }
+  
+  .mockup h2 {
+    margin-bottom: 10px;
+  }
+  
+  .showcase-button {
+    padding: 14px 28px;
+  }
+}

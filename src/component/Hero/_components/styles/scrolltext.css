@@ -1,0 +1,33 @@
+/* Wrapper to hide overflow */
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+/* Scrolling content */
+.scroll-content {
+  display: flex;
+  animation: scroll-horizontal 10s linear infinite;
+  white-space: nowrap;
+}
+
+/* Text styling */
+.scroll-text {
+  font-size: 9rem; /* Adjust as needed */
+  font-weight: 800;
+  margin: 0 2rem; /* Spacing between repetitions */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  color: #fff; /* Text color */
+}
+
+/* Keyframes for horizontal scrolling */
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

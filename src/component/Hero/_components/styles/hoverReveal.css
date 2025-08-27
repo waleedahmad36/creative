@@ -1,0 +1,83 @@
+/* Wrapper to hide overflow */
+.hover-revealer-scroll-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Scrolling content */
+  .hover-revealer-scroll-content {
+    display: flex;
+    animation: hover-revealer-scroll-horizontal 10s linear infinite;
+    white-space: nowrap;
+    visibility: hidden; /* Initially hidden */
+    animation-delay: 1s; /* Delay scroll text appearance by 1 second */
+  }
+  
+  /* Text styling */
+ .hover-revealer-scroll-text {
+  font-size: 2rem;      /* use responsive sizes, not fixed 5rem */
+  font-weight: 700;
+  margin: 0 2rem;
+  line-height: 1.4;     /* fixes clipping */
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+  
+  /* Keyframes for horizontal scrolling */
+  @keyframes hover-revealer-scroll-horizontal {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Initial state for the background reveal */
+ .hover-revealer-bg {
+  width: 0%;
+  height: 100%;   /* instead of 0% */
+  position: absolute;
+  top: 0;         /* instead of 50% translate */
+  left: 0;
+  transition: width 0.5s ease;
+  visibility: hidden;
+  overflow: visible; /* allow text to show fully */
+}
+  
+  /* Active state for background on hover (immediate reveal) */
+  .hover-revealer-bg.active {
+  width: 100%;
+  height: 100%;   /* ensure full height */
+  visibility: visible;
+}
+  
+  /* Different background colors for each section */
+  .bg-red-500 {
+    background-color: #f44336;
+  }
+  
+  .bg-green-500 {
+    background-color: #4caf50;
+  }
+  
+  .bg-blue-500 {
+    background-color: #2196f3;
+  }
+  
+  .bg-yellow-500 {
+    background-color: #ffeb3b;
+  }
+  
+  /* Show scroll content only when hovered */
+  .hover-revealer-container:hover .hover-revealer-scroll-content {
+    visibility: visible;
+  }
+  
+  .hover-revealer-container:hover .hover-revealer-title {
+    visibility: hidden;
+  }
+  

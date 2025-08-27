@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap');
+
+
+@font-face{
+  font-family: 'MatterR';
+  src: url('../public/fonts/MatterR.woff2');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'MatterR';
+}
+
+
+body{
+  background-color: #000;
+  overflow-x: hidden;
+}
+
+
+
+.SoalR{
+  font-family: 'Edu AU VIC WA NT Pre', cursive;
+}
+
+

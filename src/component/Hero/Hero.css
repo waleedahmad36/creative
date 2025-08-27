@@ -1,0 +1,36 @@
+@keyframes revealFromTopRight {
+    0% {
+      transform: scale(0);
+      transform-origin: top right;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      transform-origin: top right;
+      opacity: 0.9;
+    }
+  }
+  
+  #hero-img {
+    animation: revealFromTopRight 1.5s ease-in-out forwards;
+    opacity: 0; /* Ensures it starts hidden */
+  }
+
+
+  /* Hero.css */
+.cursor {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff; /* Change to your desired color */
+  pointer-events: none; /* Ensure it doesn't interfere with other interactions */
+  transition: transform 0.1s ease-out;
+  transform: translate(-50%, -50%); /* Center the circle on the cursor */
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+  
